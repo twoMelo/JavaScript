@@ -1,14 +1,15 @@
 // Questao 1 
 let num1 = 10;
 let num2 = 20;
-console.log(num1 > num2)
-console.log(num1 <= num2) 
-console.log(num1 == num2) 
+console.log(a  > b)
+console.log(a <= b) 
+console.log(a == b) 
 
 // Questao 2
 let idade = 18;
 console.log(idade >= 16) 
-console.log(idade >= 18 idade <= 70) 
+console.log(idade >= 18)
+console.log(idade <= 70) 
 
 // Questao 3
 console.log(idade >= 18) 
