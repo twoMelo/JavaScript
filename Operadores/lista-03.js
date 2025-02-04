@@ -24,3 +24,39 @@ if (total >= 7) {
     console.log("Reprovado")
 }
 // Questao 4
+let idade2 = prompt("Qual sua idade?") 
+if (idade >= 18) {
+    console.log("Entrada permitida")
+} else {
+    console.log("Entrada proibida")
+}
+
+
+// Questao 5 
+
+let senha = prompt("Digite a senha") 
+if (senha == "082007") {
+    console.log("Senha correta")
+} else {
+    console.log("Senha incorreta")
+}
+
+
+// Questao 6 
+
+let temp = prompt("Qual a temperatura") 
+    if (temp > 30) {
+       console.log ("Está calor")
+    } else {
+       console.log ("Está frio")
+    }
+
+
+// Questao 7 
+
+let num = prompt("Digite um numero") 
+    if (num > 0) {
+       console.log ("Número positivo")
+    } else {
+       console.log ("Número negativo")
+    }
