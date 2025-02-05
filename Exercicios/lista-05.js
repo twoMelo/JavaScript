@@ -1,12 +1,12 @@
-// Questao 1
+// Questão 1
 let idade = prompt("Qual sua idade?")
 if (idade < 18) {
     console.log("Você não pode dirigir")
-} else if (idade > 18) {
+} else { 
     console.log("Você pode dirigir")
 }
 
-// Questao 2
+// Questão 2
 let anosTrabalho = prompt("Quantos anos você trabalhou na empresa?")
 let projetos = prompt("Quantos projetos você realizou?")
 if (anosTrabalho >= 5 || projetos > 10) {
@@ -15,39 +15,45 @@ if (anosTrabalho >= 5 || projetos > 10) {
     console.log("Você não está elegível para promoção")
 }
 
-// Questao 3
-let idade = prompt("Qual sua idade?")
-if (idade >= 18 && idade <= 30){
+// Questão 3
+let idade1 = prompt("Qual sua idade?")
+if (idade1 >= 18 && idade1 <= 30) {
     console.log("Você pode entrar no evento")
 } else {
-    console.log("Voce não pode entrar no evento")
+    console.log("Você não pode entrar no evento")
 }
 
-// Questao 4
-let idade = prompt("Qual sua idade?")
-if (idade > 21) {
+// Questão 4
+let idade2 = prompt("Qual sua idade?")
+if (idade2 > 21) {
     console.log("Você foi aceito para a vaga")
-} else if (idade < 21) {
+} else {
     console.log("Você não foi aceito para a vaga")
 }
 
-// Questao 5
-let nome = prompt("Qual o seu user name")
+// Questão 5
+let nome = prompt("Qual o seu username?")
 let senha = prompt("Digite a senha")
-if (nome == "admin" && "1234") {
+if (nome == "admin" && senha == "1234") { 
     console.log("Login bem-sucedido")
-} else if {
+} else {
     console.log("Nome de usuário ou senha incorretos")
 }
 
-// Questao 6
-let numero = prompt("Numeros")
-if (numero > 10 && numero <=20){
+// Questão 6
+let numero = prompt("Digite um número")
+if (numero > 10 && numero <= 20) {
     console.log("O número está dentro do intervalo entre 10 e 20")
-} else if (numero >= 30 && numero <=50){
-    console.log ("O número está dentro do intervalo entre 30 e 50")
+} else if (numero >= 30 && numero <= 50) {
+    console.log("O número está dentro do intervalo entre 30 e 50")
 } else {
-    console.log("nao esta ")
+    console.log("O número não está nos intervalos especificados")
 }
 
-// Questao 7
+// Questão 7
+let num = prompt("Digite um número")
+if (num < 10 || num > 100 || num == 50) {
+    console.log("O número é aceito")
+} else {
+    console.log("O número não é aceito")
+}

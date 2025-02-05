@@ -29,3 +29,4 @@ let saldo = 200;
 let saque = 50;
 console.log(saldo >= saque) 
 console.log((saldo - saque) > 100)  
+
