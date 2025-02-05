@@ -59,3 +59,53 @@ if (nota > 90) {
 }
 
 // Questao 6
+
+let dia = prompt("Digite um número de 1 a 7:")
+if (dia == 1){
+    console.log("Domingo")
+} else if (dia == 2){
+    console.log("Segunda")
+} else if (dia == 3){
+    console.log("Terça")
+} else if (dia == 4){
+    console.log("Quarta")
+} else if (dia == 5){
+    console.log("Quinta")
+} else if (dia == 6){
+    console.log("Sexta")
+} else if (dia == 7){
+    console.log("Sabádo")
+} else {
+    console.log("Inválido")
+}
+
+
+
+// Questao 7
+
+
+let distancia = prompt("Qual a distância da pista em metros?")
+if (distancia < 400) {
+    console.log("Pista curta")
+} else if (distancia < 800) {
+    console.log("Pista média")
+} else if (distancia < 1500) {
+    console.log("Pista longa")
+} else {
+    console.log("Pista muito longa")
+}
+
+
+// Questao 8
+
+
+let pontuacao = prompt("Qual a sua pontuação?")
+if (pontuacao < 1000) {
+    console.log("Iniciante")
+} else if (pontuacao < 5000) {
+    console.log("Intermediário")
+} else if (pontuacao < 10000) {
+    console.log("Avançado")
+} else {
+    console.log("Mestre")
+}
