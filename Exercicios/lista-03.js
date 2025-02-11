@@ -35,7 +35,7 @@ if (idade >= 18) {
 // Questao 5 
 
 let senha = prompt("Digite a senha") 
-if (senha == "082007") {
+if (senha == "1234") {
     console.log("Senha correta")
 } else {
     console.log("Senha incorreta")
