@@ -17,12 +17,12 @@ do {
 
 // Exercicio 3
 
-let numeroFinal = prompt("Escolha um número para o final da sequência:")
+let numero = prompt("Escolha um número para o final da sequência:")
 let sequencia = 1
 do {
     console.log(sequencia)
     sequencia++
-} while (sequencia <= numeroFinal)
+} while (sequencia <= numero)
 
 // Exercicio 4
 
@@ -31,8 +31,6 @@ do {
     console.log(number)
     number += 2
 } while (number <= 31)
-
-console.log("-------------------------------------------------")
 
 // Exercicio 5
 
@@ -48,8 +46,6 @@ do {
     }
     num++
 } while (num < 5)
-
-console.log("-------------------------------------------------")
 
 // Exercicio 6
 
