@@ -1,11 +1,8 @@
-function compararIdade (idade1, idade2)
-{
-    if (idade1 > idade2) {
-        console.log("A primeira pessoa é mais velha")
-    } else if (idade2 > idade1) {
-        console.log("A segunda pessoa é mais velha")
-    } else {
-        console.log("As duas pessoas têm a mesma idade")
-    }
+let num3 = Number(prompt ("Digite um número"));
+let num4 = Number (prompt ("Digite outro número"));
+function somar(num3, num4){
+    
+    let resultado = num3 + num4 
+    return resultado
 }
-compararIdade(15, 30)
+console.log(somar(num3, num4))
