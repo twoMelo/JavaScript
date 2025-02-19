@@ -61,8 +61,8 @@ console.log(somar(num3, num4))
       return largura * altura;
   }
   
-  let largura = prompt("Digite a largura do retângulo:")
-  let altura = prompt("Digite a altura do retângulo:")
+  let largura = prompt("Digite o segundo número para SOMAR:")
+  let altura = prompt("Digite o segundo número para SOMAR:")
   
   console.log("Área do retângulo:", calcularAreaRetangulo(largura, altura))
   
