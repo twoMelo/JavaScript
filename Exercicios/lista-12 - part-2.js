@@ -55,7 +55,7 @@ let verificarIdade = (idade) => {
 let idade = Number(prompt("Digite sua idade:"))
 verificarIdade(idade);
 
-// Exercicio 7
+// Exercicio     7
 
 let calcularMedia = (nota1, nota2, nota3) => (nota1 + nota2 + nota3) / 3
 
