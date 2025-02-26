@@ -2,7 +2,7 @@
 const saudacao = function(nome) {
     console.log('Olá', + nome + 'Como vai?');
 };
-
+    
 // Exercicio 2 
 const soma = function(num1, num2) {
     console.log(num1 + num2);
