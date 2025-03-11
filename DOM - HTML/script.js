@@ -89,4 +89,4 @@ function resetarSemaforo() {
     }, 1000);
 }
 
-// Exercicio 9 
+// Exercicio 9
