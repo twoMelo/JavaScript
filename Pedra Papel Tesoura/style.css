@@ -57,3 +57,13 @@ img{
 #computadorEscolha li a.selecionado{
     opacity: 1;
 }
+
+#mensagem {
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0; /* Empurra para baixo */
+}
