@@ -7,5 +7,5 @@ navigator.mediaDevices.getUserMedia({ video: true })
         video.play()
     })
     .catch(error => {
-        console.error("Erro ao acessar a câmera: ", error)
+        console.error("Não foi possível acessar a câmera: ", error)
     })
