@@ -39,3 +39,5 @@ function addItem() {
   function clearAll() {
     document.querySelectorAll('.category ul').forEach(ul => ul.innerHTML = '');
   }
+  
+  

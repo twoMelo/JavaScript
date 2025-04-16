@@ -283,3 +283,14 @@ body {
     }
 
 }
+
+.mudarFundo{
+  background: #9e7914;  
+  background: -webkit-linear-gradient(to left, #aaa96d, #ccb803);  
+  width: 100%;
+  height:100vh;
+  position: absolute;
+ z-index: -1;
+ min-height: 100%;
+ display: flex;
+}
