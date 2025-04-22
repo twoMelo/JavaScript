@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="Samuel, Murilo, Emilly, Renan" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="img/logo.png" type="img/png" sizes="16x16">
+</head>
+
+<body>
+ 
+
+    <div class="area">
+        <ul class="bola">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+  <div class="container">
+    <h1 id="lista">Lista de Compras</h1>
+
+    <div class="form">
+      <div id="quantidade"></div>
+      <input type="text" id="item-name" placeholder="Nome do item" />
+      <input type="number" id="item-quantity" placeholder="Quantidade" min="1" />
+      <select id="category">
+        <option value="alimentos">Alimentos</option>
+        <option value="cozinha">Cozinha</option>
+        <option value="higiene">Higiene Pessoal</option>
+        <option value="banheiro">Banheiro</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="farmacia">Farmácia</option>
+        <option value="lazer">Lazer</option>
+        <option value="eletronico">Eletronicos</option>
+        <option value="Outros">Outros</option>
+      </select>
+      
+      <button onclick="addItem()">Adicionar</button>
+      <button onclick="clearAll()">Limpar Lista</button>
+    </div>
+    
+    <div class="lists">
+      <div id="alimentos" class="category">
+        <h2>Alimentos</h2>
+        <ul></ul>
+      </div>
+      <div id="cozinha" class="category">
+        <h2>Cozinha</h2>
+        <ul></ul>
+      </div>
+      <div id="higiene" class="category">
+        <h2>Higiene Pessoal</h2>
+        <ul></ul>
+      </div>
+      <div id="banheiro" class="category">
+        <h2>Banheiro</h2>
+        <ul></ul>
+      </div>
+      <div id="limpeza" class="category">
+        <h2>Limpeza</h2>
+        <ul></ul>
+      </div>
+      <div id="farmacia" class="category">
+        <h2>Farmácia</h2>
+        <ul></ul>
+      </div>
+      <div id="lazer" class="category">
+        <h2>Lazer</h2>
+        <ul></ul>
+      </div>
+      <div id="eletronico" class="category">
+        <h2>Eletronicos</h2>
+        <ul></ul>
+      </div>
+      <div id="Outros" class="category">
+        <h2>Outros</h2>
+        <ul></ul>
+        
+      </div>
+    </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
