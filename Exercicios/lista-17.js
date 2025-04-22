@@ -51,12 +51,67 @@ conta1.sacar(1000)
 // Exercicio 3
 
 class Pet {
-    constructor (nome, especie, idade) {
+    constructor(nome, especie, idade, som) {
         this.nome = nome
         this.especie = especie
         this.idade = idade
+        this.som = som
     }
-    falar () {
-        
+
+    apresentar() {
+        console.log(` ${this.nome} ela é um ${this.especie} tem ${this.idade} anos e faz ${this.som} `)
     }
 }
+
+    const cachorro = new Pet("suzi", "golden", 5, "Au Au")
+     cachorro.apresentar()
+
+     class Pet2 {
+        constructor(nome, especie, idade, som) {
+            this.nome = nome
+            this.especie = especie
+            this.idade = idade
+            this.som = som
+        }
+    
+        apresentar() {
+            console.log(` ${this.nome} ela é ${this.especie} tem ${this.idade} anos e faz ${this.som} `)
+        }
+    }
+    
+        const gato = new Pet2("lua", "persa", 2, "miau")
+         gato.apresentar()
+
+// Exercicio 4
+
+class Filme {
+    constructor(titulo, genero, duracao) {
+        this.titulo = titulo;
+        this.genero = genero;
+        this.duracao = duracao;
+    }
+
+    exibirInfo() {
+        console.log(`Você está assistindo "${this.titulo}", um filme de ${this.genero} que dura ${this.duracao} minutos.`)
+    }
+}
+const filme = new Filme("Vingadores Guerra Infinita", "Ação, Aventura", 192);
+filme.assistir()
+filme.exibirInfo()
+
+
+// Exercicio 5
+
+class musica {
+    constructor(nome, artista, tempo) {
+        this.titulo = nome
+        this.autor = artista
+        this.paginas = tempo
+    }
+
+    tocar() {
+        console.log(`Tocando ${this.titulo} de ${this.autor}`)
+    }
+}
+const musica = criarMusica("Jogado Pelo Mundão", "Mc Negao Original", 2.13);
+musica.tocar()
