@@ -1,27 +1,40 @@
 * {
     margin: 0;
     padding: 0;
-    
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     outline: none;
   }
   
   body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #5a83ba;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #5a83ba;
+    padding-top: 80px;
   }
   
   header {
-    padding: 15px 100px 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(159, 192, 223);
+    z-index: 999;
+    transition: top 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cabecalho {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 10px;
   }
   
   main {
@@ -32,11 +45,10 @@
     align-items: center;
   }
   
-  .bxs-chevron-up-circle{
-    color: green;
-  }
-  .bxs-chevron-down-circle {
-    color: red;
+  .box {
+    background-color: rgba(6, 60, 136, 0.28);
+    border-radius: 15px;
+    padding: 20px;
   }
   
   .resumo {
@@ -65,14 +77,9 @@
     flex-wrap: wrap;
   }
   
-  .divDesc, .divTipo, .divValor {
-    display: flex;
-    flex-direction: column;
-  }
-  
   .novoItem > button {
     background-color: #788699;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 0 15px;
     border-radius: 5px;
@@ -82,6 +89,7 @@
   
   input, select {
     padding: 5px;
+    border-radius: 7px;
   }
   
   .tabela-itens {
@@ -111,15 +119,6 @@
     text-align: center;
   }
   
-  input, select {
-    border-radius: 7px;
-  }
-  
-  .columnAcao > button {
-    background: transparent;
-    border: none;
-  }
-  
   .columnValor {
     width: 30%;
   }
@@ -129,25 +128,27 @@
     text-align: center;
   }
   
-
-.tema{
+  .columnAcao > button {
+    background: transparent;
+    border: none;
+  }
+  
+  .tema img {
+    width: 300px;
+    margin-right: 1200px;
+    margin-top: -40px;
     padding: 10px;
-    width: 2000px;
-    position: absolute;
-    display: block;
-
-
-      
-
-}
-
-.img {
-    width: 150px;           
-    padding: 10px;         
-    display: block;        
-    position: absolute;    
-    top: 60px;              /* distância do topo */
-    left: 50%;              /* centraliza horizontalmente */
-    transform: translateX(-50%); /* corrige o deslocamento */
-    z-index: 100;
+  }
+  
+  .h1  {
+    color: rgb(61, 80, 141);
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .h2 {
+    color: rgb(68, 102, 194);
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
   }
