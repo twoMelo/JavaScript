@@ -1,7 +1,7 @@
-//cada pergunta tem
+//Cada pergunta tem
 // - A pergunta
-// - as opções
-// - a alternativa certa (começa no 0)
+// - As opções
+// - A alternativa certa (começa no 0)
 const perguntas = [
     {
       pergunta: "Qual o nome da nossa escola?",
