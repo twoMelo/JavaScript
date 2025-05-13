@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TelaLogin from './telas/TelaLogin';
-import TelaCadastro from './telas/TelaCadastro';
+import TelaCadastro from './telas/TelaCadrasto';
 import TelaHome from './telas/TelaHome';
 import { onAuthStateChanged } from 'firebase/auth';
 import { autenticacao } from './config/firebaseConfig';
@@ -13,7 +13,7 @@ export default function App() {
   const [usuario, setUsuario] = useState(null);
 
   useEffect(() => {
-    const desinscrever = onAuthStateChanged(autenticacao, (usuarioAtual) => {
+    const desinscrever = onAuthStateChanged(autenticacao, (usuarioAtual) => {vc
       setUsuario(usuarioAtual);
     });
     return desinscrever;
