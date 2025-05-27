@@ -137,10 +137,11 @@
       const minutos = Math.floor((segundosTotais % 3600) / 60);
       const segundos = segundosTotais % 60;
 
-      document.getElementById("dias").textContent = dias;
-      document.getElementById("horas").textContent = horas;
-      document.getElementById("minutos").textContent = minutos;
-      document.getElementById("segundos").textContent = segundos;
+document.getElementById("dias").textContent = String(dias).padStart(2, "0");
+document.getElementById("horas").textContent = String(horas).padStart(2, "0");
+document.getElementById("minutos").textContent = String(minutos).padStart(2, "0");
+document.getElementById("segundos").textContent = String(segundos).padStart(2, "0");
+
 
       // Barra de progresso
       const tempoRestante = dataAlvo - agora;
