@@ -1,64 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Caixas - Loja de Doce</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h2>Simulador de Caixas</h2>
+  <h2>Simulador de Caixas - Loja de Doce</h2>
 
-    <label> Produto:
-        <input type="text" id="produto">
-    </label>
-    <br><br>
-    <label> Quantidade:
-        <input type ="number" id = "quantidade">
-    </label>
-    <br><br>
+  <button class="botao-limpar" onclick="limparTudo()">Limpar Tudo</button>
 
-    <button onclick="adicionarItem()">Adicionar a compra</button>
-    <button onclick="limparTudo()">Limpar Tudo</button>
+  <h3 class="item">Itens:</h3>
+  <ul id="listarItens"></ul>
 
-    <h3>Itens:</h3>
-    <ul id="listarItens"></ul>
+  <h3>Total: R$ <span id="total">0.00</span></h3>
 
-    <h3>Total: R$ <span id="total">0.00</span></h3>
-    <script>
 
-        let total = 0
-        function adicionarItem(){
-            const produto = document.getElementById("produto").value
-            const valor = parseFloat(document.getElementById("valor").value)
-            const quantidade = parseInt(document.getElementById("quantidade").value)
+                            <!-- Produtos -->
 
-            if(!produto || isNaN(valor) || isNaN(quantidade)) { alert("Preencha todos os campos corretamente!")
+  <div class="tipos">
 
-            }
+    <div class="produtos">
+      <img src="img/Bala-1.png" alt="Bala" width="100">
+      <button onclick="comprarProduto('Bala', 0.35)">Comprar</button>
+    </div>
 
-            const subtotal = valor * quantidade
-            total += subtotal
+    <div class="produtos">
+      <img src="img/Brigadeiro.png" alt="Brigadeiro" width="100">
+      <button onclick="comprarProduto('Brigadeiro', 2.10)">Comprar</button>
+    </div>
 
-            const lista = document.getElementById("listarItens")
-            const item = document.createElement("li")
-            item.textContent = `${produto} - R$ ${valor.toFixed(2)} x ${quantidade} = R$${subtotal.toFixed(2)}`
-            lista.appendChild(item)
+    <div class="produtos">
+      <img src="img/Beijinho.png" alt="Beijinho" width="100">
+      <button onclick="comprarProduto('Beijinho', 2.05)">Comprar</button>
+    </div>
 
-            document.getElementById("total").textContent = total.toFixed(2)
+    <div class="produtos">
+      <img src="img/Cupcake.png" alt="Cupcake" width="100">
+      <button onclick="comprarProduto('Cupcake', 3.10)">Comprar</button>
+    </div>
 
-            // Limpar campos
-            document.getElementById("produto").value = ""
-            document.getElementById("valor").value = ""
-            document.getElementById("quantidade").value = ""
-        }
+    <div class="produtos">
+      <img src="img/Pirulito.png" alt="Pirulito" width="100">
+      <button onclick="comprarProduto('Pirulito', 1.75)">Comprar</button>
+    </div>
 
-        function limparTudo () {
-            document.getElementById("listarItens").innerHTML = ""
-            document.getElementById("total").textContent = "0.00"
-            total = 0
-        }
+    <div class="produtos">
+      <img src="img/Algodão-Doce.png" alt="Algodão-Doce" width="100">
+      <button onclick="comprarProduto('Algodão-Doce', 5.10)">Comprar</button>
+    </div>
 
-    </script>
+  </div>
+                            <!-- Produtos -->
+
+
+                            <!-- SCRIPT -->
+
+  <script>
+    let total = 0;
+    const carrinho = {};
+
+    function comprarProduto(nome, preco) {
+      atualizarCarrinho(nome, preco, 1);
+    }
+
+    function atualizarCarrinho(nome, preco, quantidade) {
+      if (carrinho[nome]) {
+        carrinho[nome].quantidade += quantidade;
+      } else {
+        carrinho[nome] = { preco: preco, quantidade: quantidade };
+      }
+
+      atualizarLista();
+    }
+
+    function atualizarLista() {
+      const lista = document.getElementById("listarItens");
+      lista.innerHTML = "";
+      total = 0;
+
+      for (const nome in carrinho) {
+        const item = carrinho[nome];
+        const subtotal = item.preco * item.quantidade;
+        total += subtotal;
+
+        const li = document.createElement("li");
+        li.textContent = `${nome} (${item.quantidade}) = R$ ${subtotal.toFixed(2)}`;
+        lista.appendChild(li);
+      }
+
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
+
+    function limparTudo() {
+      document.getElementById("listarItens").innerHTML = "";
+      document.getElementById("total").textContent = "0.00";
+      total = 0;
+      for (const key in carrinho) delete carrinho[key];
+    }
+  </script>
 </body>
 </html>

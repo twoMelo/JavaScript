@@ -1,0 +1,102 @@
+body {
+    background: #ffeef2;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 20px;
+    text-align: center;
+    color: #5c2a2a;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    border: 2px solid #ffa5d8;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.botao-limpar{
+    margin-top: 40px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 10px;
+    background: #ff69b4;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff1493;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+li {
+    background: #ffe4e1;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.tipos {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px; 
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.produtos {
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ffc0cb;
+    text-align: center;
+    width: 180px;
+    transition: transform 0.2s ease;
+}
+
+.produtos:hover {
+    transform: scale(1.05);
+}
+
+.produtos img {
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.produtos button {
+    background: #ff69b4;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
