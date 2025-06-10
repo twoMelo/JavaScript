@@ -1,58 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>A Busca na Floresta Encantada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        h1 {
+            color: #2e7d32;
+        }
+        #historia {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #388e3c;
+        }
+    </style>
 </head>
-    <body>
-    <h1>A floresta</h1>
+<body>
+    <h1>🌲 A Busca na Floresta Encantada 🌲</h1>
     <div id="historia">
-        <p>Você está na frente de uma floresta. Deseja continuar?</p>
-        <button onclick="escolha1('sim')">Entrar na floresta</button>
-        <button onclick="escolha1('nao')">Voltar para casa</button>
+        <p>Você está diante de uma floresta mágica, onde dizem que um artefato lendário está escondido. A brisa sussurra segredos, e a trilha à frente parece viva. Deseja entrar na floresta? 🌿</p>
+        <button onclick="escolha1('entrar')">Entrar na floresta</button>
+        <button onclick="escolha1('voltar')">Voltar para casa</button>
     </div>
     <script>
-        function escolha1(resposta) {
-            const div = document.getElementById("historia")
-            if (resposta == "sim") {
+        function escolha1(decisao) {
+            const div = document.getElementById("historia");
+            if (decisao === "entrar") {
                 div.innerHTML = `
-                    <p>Você encontra dois caminhos. Qual quer seguir?</p>
-                    <button onclick="escolha1('sim')">Entrar na floresta</button>
-                    <button onclick="escolha1('nao')">Voltar para casa</button>
-                `
+                    <p>Você adentra a floresta e encontra dois caminhos: um à esquerda, coberto de musgo e com sons de água 💧, e outro à direita, iluminado por raios de sol ☀️. Qual caminho seguir?</p>
+                    <button onclick="escolha2('esquerda')">Caminho da esquerda</button>
+                    <button onclick="escolha2('direita')">Caminho da direita</button>
+                `;
             } else {
-            div.innerHTML = `<p>Você foi para casa. FIM</p>`
+                div.innerHTML = `<p>Você decide voltar para casa, deixando a floresta para trás. A aventura termina antes de começar. 🏠 FIM</p>`;
+            }
         }
-    }
 
-    function escolha2(caminho) {
-        const div = document.getElementById("historia")
-        if (caminho == "esquerda") {
-            div.innerHTML = `
-                <p>Você encontra um dragão. O que vai fazer?</p>
-                <button onclick="escolha3('lutar')">Lutar</button>
-                <button onclick="escolha3('fugir')">Fugir</button>
-            `
+        function escolha2(caminho) {
+            const div = document.getElementById("historia");
+            if (caminho === "esquerda") {
+                div.innerHTML = `
+                    <p>Você segue o caminho à esquerda e encontra um rio cristalino. À beira do rio, há uma ponte frágil 🌉 e um barco velho ⛵. Como deseja atravessar?</p>
+                    <button onclick="escolha3('ponte')">Atravessar pela ponte</button>
+                    <button onclick="escolha3('barco')">Usar o barco</button>
+                `;
+            } else {
+                div.innerHTML = `
+                    <p>Você escolhe o caminho à direita e encontra uma clareira com um baú brilhante 💎. Ele está trancado, mas parece mágico. O que você faz?</p>
+                    <button onclick="escolha3('abrir')">Tentar abrir o baú</button>
+                    <button onclick="escolha3('ignorar')">Ignorar e continuar</button>
+                `;
+            }
         }
-    }
-    function escolha3(acao) {
-    const div = document.getElementById("historia")
-    switch (acao) {
-        case "lutar":
-            div.innerHTML = `<p>Você venceu. Parabéns! FIM</p>`
-            break
-        case "fugir":
-            div.innerHTML = `<p>Você fugiu e chegou na entrada da floresta. FIM</p>`
-            break
-        case "abrir":
-            div.innerHTML = `<p>No baú tinha um tesouro, você agora está rico. FIM</p>`
-            break
-        case "ignorar":
-            div.innerHTML = `<p>Você caminhou e chegou na entrada da floresta. FIM</p>`
-            break
-    }
-}
+
+        function escolha3(acao) {
+            const div = document.getElementById("historia");
+            switch (acao) {
+                case "ponte":
+                    div.innerHTML = `
+                        <p>A ponte range enquanto você cruza, mas você chega ao outro lado. Lá, um dragão adormecido 🐉 bloqueia o caminho. O que você faz?</p>
+                        <button onclick="escolha4('lutar')">Enfrentar o dragão</button>
+                        <button onclick="escolha4('desviar')">Tentar desviar</button>
+                    `;
+                    break;
+                case "barco":
+                    div.innerHTML = `
+                        <p>O barco aguenta a travessia, e você encontra uma caverna escondida. Dentro, há um altar com uma joia brilhante 💍. O que você faz?</p>
+                        <button onclick="escolha4('pegar')">Pegar a joia</button>
+                        <button onclick="escolha4('deixar')">Deixar a joia</button>
+                    `;
+                    break;
+                case "abrir":
+                    div.innerHTML = `
+                        <p>Você força o baú, e ele se abre, revelando o artefato lendário! ✨ Você se torna uma lenda. FIM</p>
+                    `;
+                    break;
+                case "ignorar":
+                    div.innerHTML = `
+                        <p>Você ignora o baú e continua caminhando, mas acaba voltando à entrada da floresta sem encontrar nada. 🌳 FIM</p>
+                    `;
+                    break;
+            }
+        }
+
+        function escolha4(acao) {
+            const div = document.getElementById("historia");
+            switch (acao) {
+                case "lutar":
+                    div.innerHTML = `
+                        <p>Você enfrenta o dragão com coragem, mas ele é poderoso demais. Você é derrotado. 🔥 FIM</p>
+                    `;
+                    break;
+                case "desviar":
+                    div.innerHTML = `
+                        <p>Você contorna o dragão com cuidado e encontra o artefato lendário em um pedestal! ✨ Você vence! FIM</p>
+                    `;
+                    break;
+                case "pegar":
+                    div.innerHTML = `
+                        <p>Ao pegar a joia, a caverna começa a desmoronar! Você escapa por pouco, mas a joia é amaldiçoada. 😈 FIM</p>
+                    `;
+                    break;
+                case "deixar":
+                    div.innerHTML = `
+                        <p>Você deixa a joia e sai da caverna. A floresta parece aprovar sua escolha, e você encontra um caminho seguro para casa. 🌟 FIM</p>
+                    `;
+                    break;
+            }
+        }
     </script>
 </body>
 </html>
