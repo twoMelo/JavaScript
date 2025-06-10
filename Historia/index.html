@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Busca na Floresta Encantada</title>
+    <title>📱 Um Celular que Mostra o Futuro</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f0f0f0;
+            background: url('');
             text-align: center;
+            
         }
         h1 {
-            color: #2e7d32;
+            color: #0288d1;
         }
         #historia {
             background-color: white;
@@ -24,7 +25,7 @@
             margin-bottom: 20px;
         }
         button {
-            background-color: #4caf50;
+            background-color: #0288d1;
             color: white;
             padding: 10px 20px;
             margin: 5px;
@@ -34,44 +35,44 @@
             font-size: 16px;
         }
         button:hover {
-            background-color: #388e3c;
+            background-color: #0277bd;
         }
     </style>
 </head>
 <body>
-    <h1>🌲 A Busca na Floresta Encantada 🌲</h1>
+    <h1>📱 Um Celular que Mostra o Futuro</h1>
     <div id="historia">
-        <p>Você está diante de uma floresta mágica, onde dizem que um artefato lendário está escondido. A brisa sussurra segredos, e a trilha à frente parece viva. Deseja entrar na floresta? 🌿</p>
-        <button onclick="escolha1('entrar')">Entrar na floresta</button>
-        <button onclick="escolha1('voltar')">Voltar para casa</button>
+        <p>Você encontra um celular estranho brilhando no chão. Ao pegá-lo, a tela mostra uma mensagem: "Posso mostrar seu futuro. Deseja ver?" 🔮 O que você faz?</p>
+        <button onclick="escolha1('ver')">Ver o futuro</button>
+        <button onclick="escolha1('ignorar')">Ignorar e deixar o celular</button>
     </div>
     <script>
         function escolha1(decisao) {
             const div = document.getElementById("historia");
-            if (decisao === "entrar") {
+            if (decisao === "ver") {
                 div.innerHTML = `
-                    <p>Você adentra a floresta e encontra dois caminhos: um à esquerda, coberto de musgo e com sons de água 💧, e outro à direita, iluminado por raios de sol ☀️. Qual caminho seguir?</p>
-                    <button onclick="escolha2('esquerda')">Caminho da esquerda</button>
-                    <button onclick="escolha2('direita')">Caminho da direita</button>
+                    <p>A tela mostra você em um beco escuro, sendo perseguido por alguém. 🕵️ Há duas opções: correr para uma rua movimentada 🏃 ou se esconder em um prédio abandonado 🏚️. O que você faz?</p>
+                    <button onclick="escolha2('correr')">Correr para a rua</button>
+                    <button onclick="escolha2('esconder')">Se esconder no prédio</button>
                 `;
             } else {
-                div.innerHTML = `<p>Você decide voltar para casa, deixando a floresta para trás. A aventura termina antes de começar. 🏠 FIM</p>`;
+                div.innerHTML = `<p>Você deixa o celular no chão e vai embora. A curiosidade permanece, mas você vive sua vida normalmente. 🏡 FIM</p>`;
             }
         }
 
         function escolha2(caminho) {
             const div = document.getElementById("historia");
-            if (caminho === "esquerda") {
+            if (caminho === "correr") {
                 div.innerHTML = `
-                    <p>Você segue o caminho à esquerda e encontra um rio cristalino. À beira do rio, há uma ponte frágil 🌉 e um barco velho ⛵. Como deseja atravessar?</p>
-                    <button onclick="escolha3('ponte')">Atravessar pela ponte</button>
-                    <button onclick="escolha3('barco')">Usar o barco</button>
+                    <p>Você corre para a rua movimentada e escapa do perseguidor. O celular agora mostra uma visão de você em um laboratório secreto 🔬. Você pode entrar ou procurar ajuda. O que faz?</p>
+                    <button onclick="escolha3('entrar')">Entrar no laboratório</button>
+                    <button onclick="escolha3('ajuda')">Procurar ajuda</button>
                 `;
             } else {
                 div.innerHTML = `
-                    <p>Você escolhe o caminho à direita e encontra uma clareira com um baú brilhante 💎. Ele está trancado, mas parece mágico. O que você faz?</p>
-                    <button onclick="escolha3('abrir')">Tentar abrir o baú</button>
-                    <button onclick="escolha3('ignorar')">Ignorar e continuar</button>
+                    <p>Você se esconde no prédio, mas o celular vibra, mostrando que o perseguidor está se aproximando! 🚨 Você pode enfrentá-lo ou tentar fugir por uma janela. O que escolhe?</p>
+                    <button onclick="escolha3('enfrentar')">Enfrentar o perseguidor</button>
+                    <button onclick="escolha3('fugir')">Fugir pela janela</button>
                 `;
             }
         }
@@ -79,28 +80,28 @@
         function escolha3(acao) {
             const div = document.getElementById("historia");
             switch (acao) {
-                case "ponte":
+                case "entrar":
                     div.innerHTML = `
-                        <p>A ponte range enquanto você cruza, mas você chega ao outro lado. Lá, um dragão adormecido 🐉 bloqueia o caminho. O que você faz?</p>
-                        <button onclick="escolha4('lutar')">Enfrentar o dragão</button>
-                        <button onclick="escolha4('desviar')">Tentar desviar</button>
+                        <p>Você entra no laboratório e encontra cientistas trabalhando no celular. Eles oferecem usá-lo para mudar o futuro 🌌 ou destruí-lo para evitar riscos. O que faz?</p>
+                        <button onclick="escolha4('mudar')">Mudar o futuro</button>
+                        <button onclick="escolha4('destruir')">Destruir o celular</button>
                     `;
                     break;
-                case "barco":
+                case "ajuda":
                     div.innerHTML = `
-                        <p>O barco aguenta a travessia, e você encontra uma caverna escondida. Dentro, há um altar com uma joia brilhante 💍. O que você faz?</p>
-                        <button onclick="escolha4('pegar')">Pegar a joia</button>
-                        <button onclick="escolha4('deixar')">Deixar a joia</button>
+                        <p>Você encontra um policial e explica a situação. Ele confisca o celular, e você nunca mais o vê. Sua vida segue, mas você se pergunta "e se?". 🚓 FIM</p>
                     `;
                     break;
-                case "abrir":
+                case "enfrentar":
                     div.innerHTML = `
-                        <p>Você força o baú, e ele se abre, revelando o artefato lendário! ✨ Você se torna uma lenda. FIM</p>
+                        <p>Você enfrenta o perseguidor, mas ele é mais forte e toma o celular. Você acorda sem memória do ocorrido. 😵 FIM</p>
                     `;
                     break;
-                case "ignorar":
+                case "fugir":
                     div.innerHTML = `
-                        <p>Você ignora o baú e continua caminhando, mas acaba voltando à entrada da floresta sem encontrar nada. 🌳 FIM</p>
+                        <p>Você escapa pela janela, mas o celular mostra uma nova visão: um acidente iminente na cidade. 🚨 Você pode tentar impedir ou se proteger. O que faz?</p>
+                        <button onclick="escolha4('impedir')">Tentar impedir o acidente</button>
+                        <button onclick="escolha4('proteger')">Se proteger</button>
                     `;
                     break;
             }
@@ -109,24 +110,24 @@
         function escolha4(acao) {
             const div = document.getElementById("historia");
             switch (acao) {
-                case "lutar":
+                case "mudar":
                     div.innerHTML = `
-                        <p>Você enfrenta o dragão com coragem, mas ele é poderoso demais. Você é derrotado. 🔥 FIM</p>
+                        <p>Você usa o celular para mudar o futuro, salvando milhões de vidas. Torna-se um herói, mas o celular desaparece misteriosamente. 🦸 FIM</p>
                     `;
                     break;
-                case "desviar":
+                case "destruir":
                     div.innerHTML = `
-                        <p>Você contorna o dragão com cuidado e encontra o artefato lendário em um pedestal! ✨ Você vence! FIM</p>
+                        <p>Você destrói o celular, e a realidade parece se estabilizar. Você vive uma vida tranquila, mas com dúvidas sobre o futuro. 🌳 FIM</p>
                     `;
                     break;
-                case "pegar":
+                case "impedir":
                     div.innerHTML = `
-                        <p>Ao pegar a joia, a caverna começa a desmoronar! Você escapa por pouco, mas a joia é amaldiçoada. 😈 FIM</p>
+                        <p>Você tenta impedir o acidente, mas o celular falha no último momento. O acidente ocorre, e você se culpa pelo fracasso. 😔 FIM</p>
                     `;
                     break;
-                case "deixar":
+                case "proteger":
                     div.innerHTML = `
-                        <p>Você deixa a joia e sai da caverna. A floresta parece aprovar sua escolha, e você encontra um caminho seguro para casa. 🌟 FIM</p>
+                        <p>Você se protege e sobrevive ao acidente. O celular para de funcionar, e você decide escondê-lo para sempre. 🕳️ FIM</p>
                     `;
                     break;
             }
