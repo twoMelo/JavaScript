@@ -4,50 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jukebox</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Jukebox</h1>
     <p>Selecione como está se sentindo e ouça uma música</p>
 
-    <button onclick="tocar('feliz')">Feliz</button>
-    <button onclick="parar()">Parar</button>
+    <button class="button" onclick="tocar('alegria')">Alegria 😄🎉</button>
+    <button class="button" onclick="tocar('tristeza')">Tristeza 😢💧</button>
+    <button class="button" onclick="tocar('aventura')">Aventura 🗺️🔥</button>
+    <button class="button" onclick="tocar('amor')">Amor ❤️💘</button>              
+    <button class="button" onclick="tocar('terror')">Terror 👻🕷️</button>
+    <button class="button" onclick="tocar('calma')">Calma 🧘🌿</button>
+    <button class="button" onclick="tocar('energia')">Energia ⚡🏃‍♂️</button>
+    <button class="button" onclick="tocar('suspense')">Suspense 🕵️‍♂️🔦</button>
+    <button class="button" onclick="parar()">Parar</button>
 
-    <div id="imagem" style="margin-top: 30px;">
-        <img src="" alt="" id="foto" width="300" style="display: none;">
+    <div class="imagem" id="imagem">
+      <img src="" alt="" id="foto" />
     </div>
     <audio src="" id="audio" controls style="margin-top: 20px; display: none;"></audio>
+
     <script>
         function tocar(tipo) {
-            const audio = document.getElementById("audio")
-            const foto = document.getElementById("foto")
+            const audio = document.getElementById("audio");
+            const foto = document.getElementById("foto");
 
-            let musica = ""
-            let imagem = ""
-            let cor = ""
+            let musica = "";
+            let imagem = "";
+            let cor = "";
 
-            if (tipo === "feliz") {
-                musica = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-                imagem = "https://img.freepik.com/vetores-premium/emoticon-de-emoji-feliz-mostrando-dois-polegares-para-cima-sinal-como-um-gesto-de-mao_1303870-1082.jpg?semt=ais_hybrid&w=740"
-                cor = "#ffe066"
+
+
+
+
+            switch (tipo) {
+                case "alegria":
+                    musica = "https://rr4---sn-bg0s7n7s.googlevideo.com/videoplayback?expire=1750187233&ei=gWhRaIrFCZjp6dsPl6_yaQ&ip=82.23.90.87&id=o-AO2G74LU0RM9f00A8vnA-tF08QMZtcYx2VJztUDSE3Kx&itag=249&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AY1jyLOZfIboKYuK-Uv-uuoZrqA97lQRKyBSUqe3ypXKBoLPhKZbS_0tMdNyKLPj3VWw5nQi0NaGRhNI&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=9N-PqZ8-1PCLhr-Sp1vV1hsQ&rqh=1&gir=yes&clen=670203&dur=110.041&lmt=1728335311324575&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=5532434&n=9ib3SmziXfwekQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgJVe4V1UPqrZCl4uUFX3gJeZClbDz3o00TyYnw0muFYkCIAizC15FVp7S3tdqXblSLaWmHotkPRfq-2ZhMPIWJVis&rm=sn-8xgn5uxa-4g5k7l,sn-8xgn5uxa-quhz76,sn-bg0e7d7z&rrc=79,79,80,104&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351907,24352011,24352022,24352102,24352188,24352220,24352236&req_id=70e8a236cdeba3ee&cm2rm=sn-4g5eye76&rms=ltu,au&redirect_counter=4&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1750165723,&mh=hM&mip=200.212.26.114&mm=34&mn=sn-bg0s7n7s&ms=ltu&mt=1750165491&mv=m&mvi=4&pl=23&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAKM-84Hl_NCWrP4Wpnj827POdmYGp_ap5ij4BJjbI-fEAiAT4rf1BDKWH_oXxvz4oweOAvIqxiEYv4qxq3q4AApVHw%3D%3D";
+                    imagem = "https://ofuxico.com.br/wp-content/uploads/2024/04/Davi.jpg";
+                    cor = "#ffe066";
+                    break;
+                case "tristeza":
+                    musica = "https://rr2---sn-bg0s7ns7.googlevideo.com/videoplayback?expire=1750183838&ei=PltRaNOtJMC06dsP__ieWQ&ip=82.24.29.13&id=o-ANxg6ox6HTUCssP6WR2dRBcrjcKmGGQbsmtv6G2zupxo&itag=249&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AY1jyLMQTl_Oq6bJncRDst2fQxhHTyV9i6VBdH0-GBrVp509kGhBT5_5O-Smp8bSbqVAhUCYL025o1JX&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=LxU3CAtFJ3tuJ5pXs8LcOQ4Q&rqh=1&gir=yes&clen=3538379&dur=604.441&lmt=1670618058754088&keepalive=yes&lmw=1&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351780,24351907,24352012,24352022,24352102,24352160,24352188,24352220,24352236,51466697&c=TVHTML5&sefc=1&txp=7318224&n=3UUpqqGS2J34lQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAK0kkqqxVDeqoHKO478B-BazmGgu31CT-hKLEQKFvweKAiEA6sdmlgxeSFLBTrCrlJx2PXZ-WYy3ibjW2Cll7D7yFeA%3D&rm=sn-4g5ezs76&rrc=104,80&req_id=39e5ce8ab1d9a3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-a5meed7z&cms_redirect=yes&cmsv=e&met=1750162246,&mh=9e&mip=201.63.217.82&mm=34&mn=sn-bg0s7ns7&ms=ltu&mt=1750161880&mv=m&mvi=2&pl=16&rms=ltu,au&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgbkTNqNqeyoPfhY72alwPZJ2xyQvUSdVEKIEHVZ1LCKYCIQCPkyKkgKGwkdilid7m5-A34f_63DaCdB17cO_-YAZq8Q%3D%3D";
+                    imagem = "https://www.rbsdirect.com.br/imagesrc/35793318.jpg?version=1575255600";
+                    cor = "#a0aec0";
+                    break;
+                case "aventura":
+                    musica = "https://rr1---sn-a5msenle.googlevideo.com/videoplayback?expire=1750184302&ei=Dl1RaNDkKdHBzPsPgcnhoAg&ip=82.23.90.87&id=o-AOSDHmy6zVTCBRbmxOgid0WBRLG2XUgUPN9eb_Njnn3m&itag=249&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AY1jyLMQNobqqs0JLBZKryBA_wNx7j6Dj4ySPJWDeseVXjLCTqwHQ0iZxPhiQPuVJ3eAsFleFpd7LTHp&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=E_Xv97s6ndZxoDKh3i7G3wsQ&rqh=1&gir=yes&clen=1584919&dur=257.221&lmt=1647026989067404&keepalive=yes&lmw=1&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351907,24351916,24352011,24352022,24352102,24352188,24352220,24352236,24352333,51466642&c=TVHTML5&sefc=1&txp=4532434&n=dL8gtB_7e1njsw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAKd0sC3LxsfMcD8QcKuw5R4fIi8SL8T-owA5mULKZZghAiEAmAeoI0dJz9xfe-nKXFSggrik4MHbil6CoTZDl5irWAc%3D&rm=sn-8xgn5uxa-4g567e,sn-8xgn5uxa-quhl7l,sn-4g5ekr7z&rrc=79,79,104&req_id=b4ed8ed9a96ba3ee&rms=nxu,au&redirect_counter=3&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1750162716,&mh=s_&mip=200.212.26.114&mm=30&mn=sn-a5msenle&ms=nxu&mt=1750162067&mv=D&mvi=1&pl=0&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgJCwwjStcmvvLpBvIz69kwlr1QL9DfFnf089tzEB86-QCIQDXylqfxHZeUJ6-VXisF0yCsm1bVPz3atlNw12aNpIdJw%3D%3D";
+                    imagem = "https://images.unsplash.com/photo-1676768639358-32e7001c87f3?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+                    cor = "#90e0ef";
+                    break;
+                case "amor":
+                    musica = "https://rr1---sn-bg0s7nld.googlevideo.com/videoplayback?expire=1750187972&ei=ZGtRaK2MJ5HQp-oPjbCPuAw&ip=154.217.205.155&id=o-AB9Z0Fw0_TY5lBlotzn6NVuwHSf8KUJzHKdgZdSck9n7&itag=249&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AY1jyLNvtkm6qXMYy2pFKNIy0eDFaHAGRsyO6ahc-1MazlsNWiY7fGJBiQ2vI15y0ff5LBlisjH4PBwb&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=ILm-bfN9ys3KEWi7pHxLmIIQ&rqh=1&gir=yes&clen=1808403&dur=267.741&lmt=1739491102562250&keepalive=yes&lmw=1&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351907,24352012,24352022,24352102,24352188,24352220,24352236,24352339,51466697&c=TVHTML5&sefc=1&txp=5532534&n=bVc2qP9sBcg6kw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgevhB7t6dkwLLwHzlg2enaGqNsWAn0tzKCE9q3_hGDbwCIDf230yCgry5qweDulH6zct4Upck6tOToNwDpRwfy0Ei&cm2rm=sn-hgnlr7e&rrc=80,104&req_id=75cd047322b4a3ee&rms=ltu,au&redirect_counter=2&rm=sn-a5me7d7e&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1750166378,&mh=rJ&mip=201.63.217.82&mm=34&mn=sn-bg0s7nld&ms=ltu&mt=1750166200&mv=m&mvi=1&pl=16&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAOZQMx3QAAQPa-BLfhLgfcQX8spu_18PoOf_nRDejIRwAiEAoib8drogZeJzOLSQ7KQbMLMNefGF0HGDJ52VlEx9Hso%3D";
+                    imagem = "https://img.freepik.com/vetores-gratis/coracao_78370-492.jpg?semt=ais_hybrid&w=740";
+                    cor = "#ffb6c1";
+                    break;
+                case "terror":
+                    musica = "https://rr3---sn-bg0e6n7r.googlevideo.com/videoplayback?expire=1750186231&ei=l2RRaLOiHKSxsvQP-uCvyAo&ip=96.62.185.143&id=o-AI0h3K4D0Za8poDq262B50dI_CBKZXJuAXCudKqg67uS&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&bui=AY1jyLMuAhf6uNdj3AJkG8rg_C5mSjyTqGzVa-yp5rI15elgPmKeMhrj8kQjWUIzjscFY20GwoJr9Vs_&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=t_qC0VZuJVN6NbPxQCVCu8kQ&rqh=1&gir=yes&clen=5223696&dur=306.621&lmt=1712974831143579&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=8218224&n=9YEv8-_r42QAQA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAIbpBFtCIaMs-rd3cNIj4pfYGjfFDNAHBtzmWQX7G5DQAiB8R_10MG2YrtvAuWuJmb11YTQketGX4KzGYYaszLiJNA%3D%3D&redirect_counter=1&rm=sn-p5qe777z&rrc=104&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351907,24352012,24352022,24352102,24352188,24352220,24352236,24352370&req_id=61bf81bcbd66a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1750164643,&mh=CN&mip=201.63.217.82&mm=31&mn=sn-bg0e6n7r&ms=au&mt=1750163089&mv=u&mvi=3&pl=16&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgJsLO5jwKEluvg2NtLONxu35pDTu3wkfRozAcIlLGz5QCIQCK6ejGL7QQKPEVo6i_6YEuuiFNuZx8Aoy3Pw5GNWwsrA%3D%3D";
+                    imagem = "https://www.fantasticacultural.com.br/imgs/covers_mob/202306021227s-vinte_mil_leguas_submarinas_monstro_marinho-0.webp";
+                    cor = "gray";
+                    break;
+                case "calma":
+                    musica = "https://rr1---sn-bg0e6ne6.googlevideo.com/videoplayback?expire=1750187687&ei=R2pRaPu2F4CfzLUPv__FwAw&ip=207.228.17.115&id=o-AGOSm5y2pUEHYnJ9BHbUsj-cIbbZg3PRW4Nh6Sy1-LHt&itag=249&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AY1jyLMLntAeN0HzU3qwns3F8Z4m-1SweJgbv4PcN0jDfhFPerCoHIM-kKaUcMdL-WA-orDVPsd0JcDX&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=LHbczYKmwRYS5UB_cJ4H-TIQ&rqh=1&gir=yes&clen=2022048&dur=284.401&lmt=1723221891499582&keepalive=yes&lmw=1&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351907,24352012,24352022,24352102,24352154,24352188,24352220,24352236,51466643&c=TVHTML5&sefc=1&txp=5532434&n=XwnibVX-akQvGQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAJCzL_0lVdFQJ5rcrqMIE5XQt1Cx9WC8k-MtoPJ_jN7UAiEAiIrp3M8iOoMSi91nuAoUMboqrjJw7NkDby5rFeIjgfM%3D&rm=sn-p5qee67s&rrc=104,80&req_id=a0b10c3614d3a3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-a5me7676&cms_redirect=yes&cmsv=e&met=1750166096,&mh=cg&mip=201.63.217.82&mm=34&mn=sn-bg0e6ne6&ms=ltu&mt=1750165723&mv=m&mvi=1&pl=16&rms=ltu,au&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAIktUF-0R6dDwJwfcnJOig_Dr9js9RR44aiis9zYR20gAiEA4ic7Ccq3LxaSGw55q5iW70LhCNxuMJ_gnmdye9r-jtM%3D";
+                    imagem = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReq4dAZbRF0a39Y6qQAXGooWI13HXyjfTUOg&s";
+                    cor = "green";  
+                    break;
+               case "energia":
+                    musica = "https://rr3---sn-bg0e6n7e.googlevideo.com/videoplayback?expire=1750184602&ei=Ol5RaLHJN6XHs8IPy62W4Ao&ip=82.23.196.69&id=o-APszooJFEvaIjvfFM-800qxmb6s_BAQQOddmWcJ9jxmO&itag=249&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&bui=AY1jyLN4KaWO1K_AWcuDwr6vVezf1sIlpTe0VH-pYrlU3gKmbFPm-0NcCPHwGwj4xHoD7fDbq7oIsEDL&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=FM-cSwUx8ohqeq0PTHr0CakQ&rqh=1&gir=yes&clen=1406545&dur=237.861&lmt=1726692840845225&keepalive=yes&lmw=1&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351907,24352011,24352022,24352102,24352157,24352188,24352220,24352236,51466697&c=TVHTML5&sefc=1&txp=5532434&n=4f99UpnoXh8smQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgY63zOD4BPJBcaIXUvj7dMsBtVBC58wHYWpVwXWn_mhICIQC0N1z5g2HYWB2Bq1V6bqcMKDR7YL3Ja0dFCprb7mKB9w%3D%3D&redirect_counter=1&rm=sn-a5mye7l&rrc=104&req_id=e216b12cb07ba3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1750163013,&mh=0n&mip=201.63.217.82&mm=31&mn=sn-bg0e6n7e&ms=au&mt=1750162626&mv=m&mvi=3&pl=16&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAMwICyf_eA4QI5-nuDfyXa8ifEUKsIDAaGlg8oeucf2tAiAo4kqdLIiP6rdLeZ7MBroUrJnnBLTIZa6d8WpQaxh-MQ%3D%3D";
+                    imagem = "https://ogimg.infoglobo.com.br/in/23651005-f81-5fe/FT1086A/82572177_Soccer-FootballChampions-League-Semi-Final-Second-LegAjax-Amsterdam-v-Tottenham-H.jpg";
+                    cor = "#2f2f2f";
+                    break;
+                case "suspense":
+                    musica = "https://rr3---sn-bg0s7nlk.googlevideo.com/videoplayback?expire=1750187270&ei=pmhRaNDmB8y0kucPrcO3sQQ&ip=62.164.228.68&id=o-AOLeevrq3_vg2YVI8ISY6XLPAGm5OhuJzdeFm4j12AGi&itag=249&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AY1jyLPBmwyJzSH_t-2lTd3k0MIlTT26b06TsFkPNUymDIRpGb1jqGF685dserEGoNAw0Hiqp1nuECXl&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=b4H48zthf9JUD-lD45fXPdIQ&rqh=1&gir=yes&clen=1130142&dur=149.021&lmt=1729699433582326&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=5308224&n=Uv41WY82bslucA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhANkkwl_GsoeednTT5FFiWN1-46grsjUq8YJ_vqV-ID9xAiAr-Ssk97AkaePHV6yC92E3xHN-Dd3GarFIkbAKjMkZzw%3D%3D&rm=sn-p5qell7s,sn-xhcg5uxa-bg0676&rrc=104,79&fexp=24350590,24350737,24350827,24350961,24351173,24351316,24351318,24351495,24351528,24351759,24351907,24352011,24352022,24352102,24352188,24352220,24352236,24352322&req_id=2b6daa51945aa3ee&ipbypass=yes&redirect_counter=2&cms_redirect=yes&cmsv=e&met=1750165782,&mh=u9&mip=200.212.26.114&mm=29&mn=sn-bg0s7nlk&ms=rdu&mt=1750165268&mv=m&mvi=3&pl=23&rms=rdu,au&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgRiD4TVZciuY1PFSP2uBq3fC9oZHjJvMcfZatL_KqwjMCIQC9WZm_hVGqY_T10VF2KnRmkBHHuRCbOLhaBBFwJzFA8w%3D%3D";
+                    imagem = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkXHvkqRn6LyDATZAFUeY397PHT09mwzfmDQ&s";
+                    cor = "rgba(0, 0, 0, 0.8)";
+                    break;
             }
-            document.body.style.backgroundColor = cor
-            foto.src = imagem
-            foto.style.display = "block"
 
-            audio.src = musica
-            audio.style.display = "block"
-            audio.play()
+            document.body.style.backgroundColor = cor;
+            foto.src = imagem;
+            foto.style.display = "block";
+
+            audio.src = musica;
+            audio.style.display = "block";
+            audio.play();
         }
+
         function parar() {
-            const audio = document.getElementById("audio")
-            audio.pause()
-            audio.currentTime = 0
-            audio.style.display = "none"
+            const audio = document.getElementById("audio");
+            audio.pause();
+            audio.currentTime = 0;
+            audio.style.display = "none";
 
-            const foto = document.getElementById("foto")
-            foto.style.display = "none"
+            const foto = document.getElementById("foto");
+            foto.style.display = "none";
 
-            document.body.style.backgroundColor = "#fff"
+            document.body.style.backgroundColor = "#fff";
         }
     </script>
 </body>
